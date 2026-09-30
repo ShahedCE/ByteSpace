@@ -56,7 +56,7 @@ export default function Discover() {
   );
 
   return (
-    <section className="w-full bg-white flex flex-col items-center px-4 mt-[72px] pb-[100px]">
+    <section className="w-full bg-white flex flex-col items-center px-4 mt-[72px]">
       <div className="flex flex-col items-center text-center w-full">
         <h2
           style={{
