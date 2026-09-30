@@ -1,6 +1,7 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
+import LogoPartner from "@/components/sections/LogoPartner";
 
 export default function HomePage() {
   return (
@@ -27,9 +28,9 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* From ellipse end onwards: Clean White Background */}
-      <main className="flex-1 bg-white">
-        {/* Future sections (Stats, Courses, Testimonials, etc.) will be placed here */}
+      {/* Main Content Area */}
+      <main className="flex-1 bg-white relative z-20 -mt-[28px] lg:-mt-[30px]">
+        <LogoPartner />
       </main>
       <Footer />
     </div>
