@@ -199,7 +199,7 @@ export default function Footer() {
             </div>
 
             {/* Column 3 */}
-            <div className="flex flex-col" style={{ gap: "16px", flex: 1 }}>
+            <div className="flex flex-col" style={{ gap: "16px", flex: 1, marginLeft: "-48px" }}>
               {menuColumn3.map((item, idx) => (
                 <Link
                   href="#"
