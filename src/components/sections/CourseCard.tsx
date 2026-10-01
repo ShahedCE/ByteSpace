@@ -30,7 +30,7 @@ export default function CourseCard({
         width: "373px",
         height: "384px",
         borderRadius: "24px",
-        border: "1px solid rgba(0, 0, 0, 0.25)", // Blackish border
+        border: "1px solid #E6E8EC", // Thin silver border
       }}
     >
       {/* Image Area */}
@@ -42,6 +42,7 @@ export default function CourseCard({
           top: "16px",
           left: "16px",
           borderRadius: "12px",
+          border: "1px solid #E6E8EC", // Thin silver border for image
         }}
       >
         <Image
@@ -67,7 +68,7 @@ export default function CourseCard({
               key={text}
               className="flex items-center justify-center shrink-0"
               style={{
-                height: "26px",
+                height: "32px", // Increased height
                 borderRadius: "24px",
                 padding: "6px 12px",
                 background: "#F6F6F699",
@@ -174,7 +175,7 @@ export default function CourseCard({
             style={{ width: "128px", height: "32px" }}
           >
             <Image
-              src="/images/horizontal-image.png"
+              src="/images/signup.png"
               alt="Students"
               fill
               className="object-contain"
@@ -246,15 +247,12 @@ export default function CourseCard({
           {rating}
         </span>
         <div
-          className="relative shrink-0"
+          className="relative shrink-0 flex items-center justify-center"
           style={{ width: "24px", height: "24px", marginTop: "-2px" }}
         >
-          <Image
-            src="/images/rating-star.svg"
-            alt="rating star"
-            fill
-            className="object-contain"
-          />
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#D4FB20"/>
+          </svg>
         </div>
       </div>
     </div>
