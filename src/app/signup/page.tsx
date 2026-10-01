@@ -22,8 +22,8 @@ export default function SignupPage() {
         className="absolute inset-0 pointer-events-none select-none z-0"
         style={{
           backgroundImage: `
-            linear-gradient(to right, rgba(255, 255, 255, 0.14) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(255, 255, 255, 0.14) 1px, transparent 1px)
+            linear-gradient(to right, rgba(255, 255, 255, 0.14) 2px, transparent 2px),
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.14) 2px, transparent 2px)
           `,
           backgroundSize: "120px 120px",
           backgroundPosition: "0 0",
