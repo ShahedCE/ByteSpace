@@ -3,6 +3,7 @@ import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
 import LogoPartner from "@/components/sections/LogoPartner";
 import Discover from "@/components/sections/Discover";
+import Explore from "@/components/sections/Explore";
 
 export default function HomePage() {
   return (
@@ -33,6 +34,7 @@ export default function HomePage() {
       <main className="flex-1 bg-white relative z-20 -mt-[28px] lg:-mt-[30px]">
         <LogoPartner />
         <Discover />
+        <Explore />
       </main>
       <Footer />
     </div>
