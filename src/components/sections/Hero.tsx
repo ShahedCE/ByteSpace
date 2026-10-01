@@ -81,9 +81,9 @@ export default function Hero() {
           <br className="hidden sm:inline" /> Courses Available
         </h1>
 
-        {/* Subtitle Description (exact Figma specs: 819x29, 1 line, Satoshi 18px 160% #E5E6E8) */}
+        {/* Subtitle Description */}
         <p
-          className="mt-6 text-center select-none font-satoshi md:whitespace-nowrap flex items-center justify-center mx-auto"
+          className="mt-6 text-center select-none mx-auto w-full max-w-[819px]"
           style={{
             fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
             fontWeight: 400,
@@ -92,9 +92,6 @@ export default function Hero() {
             letterSpacing: "0%",
             textAlign: "center",
             color: "#E5E6E8",
-            width: "819px",
-            maxWidth: "100%",
-            minHeight: "29px",
           }}
         >
           Unlock your creativity, gain valuable knowledge, and grow your business with our wide range of courses.

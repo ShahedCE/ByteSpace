@@ -17,7 +17,7 @@ export default function LogoPartner() {
     >
       <div className="w-full max-w-[1440px] mx-auto flex justify-center items-center px-4 sm:px-6">
         <div
-          className="w-full max-w-[1132px] h-auto lg:h-[42px] flex flex-nowrap items-center justify-between gap-2 sm:gap-6 lg:gap-[72px]"
+          className="w-full max-w-[1132px] h-auto flex flex-wrap items-center justify-center gap-6 sm:gap-8 lg:gap-[72px] py-2"
         >
           {partnerLogos.map((logo, index) => (
             <div
