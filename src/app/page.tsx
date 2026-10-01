@@ -5,6 +5,7 @@ import LogoPartner from "@/components/sections/LogoPartner";
 import Discover from "@/components/sections/Discover";
 import Explore from "@/components/sections/Explore";
 import ProfessionalGrowth from "@/components/sections/ProfessionalGrowth";
+import CTA from "@/components/sections/CTA";
 
 export default function HomePage() {
   return (
@@ -37,6 +38,7 @@ export default function HomePage() {
         <Discover />
         <Explore />
         <ProfessionalGrowth />
+        <CTA />
       </main>
       <Footer />
     </div>
