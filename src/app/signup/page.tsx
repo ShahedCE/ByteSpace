@@ -83,14 +83,15 @@ export default function SignupPage() {
 
         {/* Left Visual Area / Cards Container */}
         <div
-          className="relative lg:absolute mt-8 lg:mt-0 lg:top-[305px] lg:left-[97px] w-[548px] h-[585px] transform scale-[0.6] sm:scale-[0.8] lg:scale-100 origin-top shrink-0"
+          className="relative lg:absolute mt-8 lg:mt-0 lg:top-[305px] lg:left-[97px] w-[548px] h-[700px] transform scale-[0.6] sm:scale-[0.8] lg:scale-100 origin-top shrink-0 overflow-hidden lg:overflow-visible"
         >
           {/* Lower Card (Background) */}
           <div
-            className="absolute z-10"
+            className="absolute z-10 max-lg:-translate-y-[20px]"
             style={{
-              top: "89px", // (394 - 305) since container is at 305px
-              left: "25px", // (122 - 97) since container is at 97px
+              top: "109px",
+              left: "25px",
+              width: "373px",
             }}
           >
             <CourseCard
@@ -110,8 +111,10 @@ export default function SignupPage() {
           <div
             className="absolute z-20"
             style={{
-              top: "0px", // (305 - 305)
-              left: "136px", // (233 - 97)
+              top: "18px",
+              left: "136px",
+              width: "373px",
+              borderRadius: "24px",
             }}
           >
             <CourseCard
@@ -129,11 +132,11 @@ export default function SignupPage() {
 
           {/* Green Ring */}
           <div
-            className="absolute z-30 pointer-events-none max-lg:translate-y-[25px] max-lg:translate-x-[38px]"
+            className="absolute z-30 pointer-events-none max-lg:translate-y-[15px] max-lg:translate-x-[38px]"
             style={{
               width: "150px",
               height: "150px",
-              top: "15px",
+              top: "35px",
               left: "52px",
             }}
           >
@@ -147,11 +150,11 @@ export default function SignupPage() {
 
           {/* White Scribble */}
           <div
-            className="absolute pointer-events-none z-40 max-lg:-translate-y-[40px] max-lg:-translate-x-[70px]"
+            className="absolute pointer-events-none z-40 max-lg:-translate-y-[30px] max-lg:-translate-x-[70px]"
             style={{
               width: "180px",
               height: "180px",
-              top: "320px",
+              top: "330px",
               left: "370px",
             }}
           >
@@ -165,11 +168,11 @@ export default function SignupPage() {
 
           {/* Happy Students Rectangle */}
           <div
-            className="absolute flex flex-col justify-center z-30 max-lg:-translate-y-[75px] max-lg:-translate-x-[51px]"
+            className="absolute flex flex-col justify-center z-30 max-lg:-translate-y-[45px] max-lg:-translate-x-[51px]"
             style={{
               width: "258px",
               height: "123px",
-              top: "435px",
+              top: "445px",
               left: "251px",
               backgroundColor: "#D4FB20",
               borderRadius: "16px",
@@ -230,11 +233,11 @@ export default function SignupPage() {
 
           {/* Green Ring */}
           <div
-            className="absolute z-30 pointer-events-none max-lg:-translate-y-[60px] max-lg:translate-x-[30px]"
+            className="absolute z-30 pointer-events-none max-lg:-translate-y-[30px] max-lg:translate-x-[30px]"
             style={{
               width: "200px",
               height: "190px",
-              top: "400px",
+              top: "410px",
               left: "-10px",
             }}
           >
@@ -249,7 +252,7 @@ export default function SignupPage() {
 
         {/* Right Form Frame */}
         <div
-          className="relative lg:absolute bg-white flex flex-col items-center justify-center mt-[-60px] sm:mt-[-20px] lg:mt-0 lg:top-[120px] lg:left-[741px] w-[90%] sm:w-[579px] h-auto lg:h-[784px] rounded-[24px] shadow-[0px_12px_32px_rgba(0,0,0,0.05)] py-10 lg:py-0 px-6 sm:px-0"
+          className="relative lg:absolute bg-white flex flex-col items-center justify-center mt-[-220px] sm:mt-[-140px] lg:mt-0 lg:top-[120px] lg:left-[741px] w-[90%] sm:w-[579px] h-auto lg:h-[784px] rounded-[24px] shadow-[0px_12px_32px_rgba(0,0,0,0.05)] py-10 lg:py-0 px-6 sm:px-0"
         >
           <div
             className="flex flex-col justify-between w-full sm:w-[453px] h-auto lg:h-[672px]"

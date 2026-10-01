@@ -48,21 +48,13 @@ export default function Explore() {
 
         {/* Categories Container */}
         <div
-          className="flex flex-wrap justify-center"
-          style={{
-            width: "1202px",
-            maxWidth: "100%",
-            gap: "40px",
-            marginTop: "68px",
-          }}
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 w-full max-w-[1202px] gap-4 sm:gap-6 lg:gap-[40px] mt-[68px]"
         >
           {categories.map((category, idx) => (
             <div
               key={idx}
-              className="flex items-center justify-center shrink-0 cursor-pointer transition-colors hover:bg-gray-50 bg-white"
+              className="flex items-center justify-center cursor-pointer transition-colors hover:bg-gray-50 bg-white w-full aspect-square max-w-[167px] mx-auto"
               style={{
-                width: "167px",
-                height: "167px",
                 borderRadius: "24px",
                 border: "1px solid #CED0D3",
               }}
@@ -94,11 +86,10 @@ export default function Explore() {
 
                 {/* Title */}
                 <span
-                  className="text-[#040819]"
+                  className="text-[#040819] text-[14px] sm:text-[16px] lg:text-[20px] text-center"
                   style={{
                     fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
                     fontWeight: 500,
-                    fontSize: "20px",
                     lineHeight: "120%",
                   }}
                 >
