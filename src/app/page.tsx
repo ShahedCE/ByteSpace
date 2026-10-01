@@ -4,6 +4,7 @@ import Hero from "@/components/sections/Hero";
 import LogoPartner from "@/components/sections/LogoPartner";
 import Discover from "@/components/sections/Discover";
 import Explore from "@/components/sections/Explore";
+import ProfessionalGrowth from "@/components/sections/ProfessionalGrowth";
 
 export default function HomePage() {
   return (
@@ -35,6 +36,7 @@ export default function HomePage() {
         <LogoPartner />
         <Discover />
         <Explore />
+        <ProfessionalGrowth />
       </main>
       <Footer />
     </div>
