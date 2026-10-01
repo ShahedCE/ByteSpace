@@ -162,7 +162,7 @@ export default function Footer() {
             <div className="flex flex-col" style={{ gap: "16px" }}>
               {menuColumn1.map((item, idx) => (
                 <Link
-                  href="#"
+                  href="/404"
                   key={idx}
                   className="hover:underline underline-offset-4"
                   style={{
@@ -182,7 +182,7 @@ export default function Footer() {
             <div className="flex flex-col" style={{ gap: "16px", flex: 1 }}>
               {menuColumn2.map((item, idx) => (
                 <Link
-                  href="#"
+                  href="/404"
                   key={idx}
                   className="hover:underline underline-offset-4"
                   style={{
@@ -202,7 +202,7 @@ export default function Footer() {
             <div className="flex flex-col" style={{ gap: "16px", flex: 1, marginLeft: "-48px" }}>
               {menuColumn3.map((item, idx) => (
                 <Link
-                  href="#"
+                  href="/404"
                   key={idx}
                   className="hover:underline underline-offset-4"
                   style={{
@@ -245,7 +245,7 @@ export default function Footer() {
               (text, idx) => (
                 <Link
                   key={idx}
-                  href="#"
+                  href="/404"
                   className="hover:underline underline-offset-4"
                   style={{
                     fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",

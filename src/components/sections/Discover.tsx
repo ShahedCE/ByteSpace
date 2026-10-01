@@ -31,16 +31,17 @@ export default function Discover() {
 
   const Tab = ({ label, active, isMore }: { label: string; active?: boolean; isMore?: boolean }) => (
     <div
-      className="flex items-center justify-center shrink-0 cursor-pointer select-none"
+      className={`flex items-center justify-center shrink-0 cursor-pointer select-none transition-colors duration-300 ${
+        isMore ? "bg-transparent" : active ? "bg-[#D4FB20] hover:bg-[#bce600]" : "bg-[#F5F5F6] hover:bg-[#E2E4E7]"
+      }`}
       style={{
         height: "43px",
         borderRadius: "24px",
         padding: isMore ? "0px" : "12px 16px",
-        background: isMore ? "transparent" : (active ? "#D4FB20" : "#F5F5F6"),
-        transition: "all 0.2s ease-in-out",
       }}
     >
       <span
+        className={`transition-colors duration-300 ${isMore ? "hover:text-[#002ba8]" : ""}`}
         style={{
           fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
           fontWeight: 500,
