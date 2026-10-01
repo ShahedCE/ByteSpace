@@ -1,4 +1,5 @@
 import React from "react";
+import TestimonialCard from "@/components/ui/TestimonialCard";
 
 export default function Testimonial() {
   return (
@@ -25,6 +26,11 @@ export default function Testimonial() {
             rgba(125, 140, 255, 0.6) 0%,
             rgba(190, 205, 255, 0.3) 45%,
             transparent 72%
+          ),
+          linear-gradient(
+            to top,
+            rgba(125, 140, 255, 0.08) 0%,
+            transparent 60%
           )
         `,
       }}
@@ -101,67 +107,13 @@ export default function Testimonial() {
               text: '"As a creator, ByteSpace has been a game-changer for me. The Course Editor is user-friendly, and the support from the community is incredible. It\'s fulfilling to see my courses making a positive impact on learners globally."',
             }
           ].map((testimonial, idx) => (
-            <div
+            <TestimonialCard
               key={idx}
-              className="flex flex-col"
-              style={{
-                width: "374px",
-                height: "432px",
-                backgroundColor: "#FFFFFF",
-                borderRadius: "24px",
-                padding: "24px",
-                boxShadow: "0px 12px 32px rgba(0, 0, 0, 0.05)",
-                gap: "24px", // Defines the gap between image, title block, and paragraph
-              }}
-            >
-              <img
-                src={testimonial.image}
-                alt={testimonial.name}
-                style={{
-                  width: "80px",
-                  height: "80px",
-                  borderRadius: "50%",
-                  objectFit: "cover",
-                }}
-              />
-              <div className="flex flex-col">
-                <h3
-                  style={{
-                    fontFamily: "var(--font-poppins), 'Poppins', sans-serif",
-                    fontWeight: 600,
-                    fontSize: "20px",
-                    lineHeight: "120%",
-                    letterSpacing: "-0.01em",
-                    color: "#000000",
-                  }}
-                >
-                  {testimonial.name}
-                </h3>
-                <span
-                  style={{
-                    marginTop: "4px",
-                    fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
-                    fontWeight: 400,
-                    fontSize: "18px",
-                    lineHeight: "160%",
-                    color: "#003BE2",
-                  }}
-                >
-                  {testimonial.title}
-                </span>
-              </div>
-              <p
-                style={{
-                  fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
-                  fontWeight: 400,
-                  fontSize: "18px",
-                  lineHeight: "160%",
-                  color: "#4F4F4F",
-                }}
-              >
-                {testimonial.text}
-              </p>
-            </div>
+              image={testimonial.image}
+              name={testimonial.name}
+              title={testimonial.title}
+              text={testimonial.text}
+            />
           ))}
         </div>
       </div>
