@@ -7,10 +7,8 @@ export default function Hero() {
       <div className="absolute inset-0 pointer-events-none select-none overflow-hidden w-full z-10">
         {/* 1. Top-Left: Mirrored mask-group.svg with exact #D4FB20 color, tucked into the left screen edge */}
         <div
-          className="absolute top-[60px] sm:top-[80px] lg:top-[100px] -left-20 sm:-left-28 lg:-left-[130px] pointer-events-none select-none z-10"
+          className="absolute top-[60px] sm:top-[80px] lg:top-[100px] -left-20 sm:-left-28 lg:-left-[130px] pointer-events-none select-none z-10 w-[200px] h-[200px] sm:w-[280px] sm:h-[280px] md:w-[320px] md:h-[320px] lg:w-[386.79px] lg:h-[386.79px]"
           style={{
-            width: "386.79px",
-            height: "386.79px",
             transform: "scaleX(-1)",
           }}
         >
@@ -46,11 +44,7 @@ export default function Hero() {
 
         {/* 4. Top-Right: Lime Pillar / Cylinder (Flush to the right edge of the screen) */}
         <div
-          className="absolute top-[40px] sm:top-[70px] lg:top-[100px] right-0 pointer-events-none select-none z-10"
-          style={{
-            width: "213px",
-            height: "372px",
-          }}
+          className="absolute top-[40px] sm:top-[70px] lg:top-[100px] right-0 pointer-events-none select-none z-10 w-[120px] h-[210px] sm:w-[160px] sm:h-[280px] md:w-[180px] md:h-[314px] lg:w-[213px] lg:h-[372px]"
         >
           <Image
             src="/icons/mask-group2.svg"
@@ -63,7 +57,7 @@ export default function Hero() {
         </div>
 
         {/* 5. Middle-Right: White Pyramid (Tetrahedron) - fine-tuned size & shifted slightly right */}
-        <div className="absolute top-[330px] sm:top-[360px] lg:top-[350px] right-5 sm:right-10 lg:right-[118px] w-[100px] sm:w-[138px] lg:w-[188px] z-10">
+        <div className="absolute top-[330px] sm:top-[360px] lg:top-[350px] right-5 sm:right-10 lg:right-[118px] w-[80px] sm:w-[120px] lg:w-[188px] z-10">
           <Image
             src="/icons/Mask Group-triangle.svg"
             alt=""
@@ -163,8 +157,7 @@ export default function Hero() {
 
         {/* Central Visual Stage: Arch + Man + Floating Cards - closer to search bar */}
         <div className="relative mt-1 sm:mt-2 md:mt-3 lg:mt-[0px] w-full max-w-[1149px] flex justify-center items-center">
-          {/* Neon Lime Arch (Ellipse 7) behind the man */}
-          <div className="absolute top-[24px] sm:top-[44px] md:top-[64px] lg:top-[74px] w-full max-w-[850px] lg:max-w-[1149px] pointer-events-none select-none z-0 flex justify-center">
+          <div className="absolute bottom-0 lg:bottom-auto lg:top-[74px] w-[120%] sm:w-[110%] lg:w-full max-w-[1149px] pointer-events-none select-none z-0 flex justify-center">
             <Image
               src="/icons/Ellipse 7.png"
               alt=""
@@ -177,11 +170,7 @@ export default function Hero() {
 
           {/* 3. White Torus (Cone.svg) - Exact Figma: 342x342, top: 682px, left: 18px */}
           <div
-            className="absolute z-10 pointer-events-none select-none top-[120px] sm:top-[140px] md:top-[155px] lg:top-[167px] -left-10 sm:-left-16 md:-left-24 lg:-left-[128px] w-[180px] sm:w-[240px] md:w-[290px] lg:w-[342px] lg:h-[342px]"
-            style={{
-              width: "342px",
-              height: "342px",
-            }}
+            className="absolute z-10 pointer-events-none select-none top-[120px] sm:top-[140px] md:top-[155px] lg:top-[167px] -left-10 sm:-left-16 md:-left-24 lg:-left-[128px] w-[110px] h-[110px] sm:w-[160px] sm:h-[160px] md:w-[220px] md:h-[220px] lg:w-[342px] lg:h-[342px]"
           >
             <Image
               src="/icons/Cone.svg"
@@ -210,12 +199,8 @@ export default function Hero() {
 
           {/* Floating Card 1: UI/UX Design (Exact Figma: 208x70, r:16, p:16, gap:8, Satoshi 16px 500 120%) */}
           <div
-            className="absolute z-30 top-[40px] sm:top-[65px] md:top-[90px] lg:top-[124px] left-[4%] sm:left-[10%] md:left-[16%] lg:left-[258px] bg-white rounded-[16px] p-[16px] shadow-[0px_10px_30px_rgba(0,0,0,0.12)] border border-gray-100/80 flex flex-col justify-center select-none"
+            className="absolute z-30 top-[60px] sm:top-[80px] md:top-[90px] lg:top-[124px] left-[10%] sm:left-[16%] md:left-[20%] lg:left-[258px] bg-white rounded-lg lg:rounded-[16px] p-2 lg:p-[16px] shadow-[0px_10px_30px_rgba(0,0,0,0.12)] border border-gray-100/80 flex flex-col justify-center select-none w-[110px] sm:w-[140px] lg:w-[208px] h-[45px] sm:h-[55px] lg:h-[70px]"
             style={{
-              width: "208px",
-              height: "70px",
-              borderRadius: "16px",
-              padding: "16px",
               background: "#FFFFFF",
               backdropFilter: "blur(20px)",
               WebkitBackdropFilter: "blur(20px)",
@@ -223,12 +208,10 @@ export default function Hero() {
             }}
           >
             <span
+              className="text-[9px] sm:text-[12px] lg:text-[16px]"
               style={{
-                width: "98px",
-                height: "19px",
                 fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
                 fontWeight: 500,
-                fontSize: "16px",
                 lineHeight: "120%",
                 letterSpacing: "0%",
                 verticalAlign: "middle",
@@ -240,10 +223,10 @@ export default function Hero() {
               UI/UX Design
             </span>
             <span
+              className="text-[7px] sm:text-[9px] lg:text-[12px]"
               style={{
                 fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
                 fontWeight: 400,
-                fontSize: "12px",
                 lineHeight: "120%",
                 letterSpacing: "0%",
                 color: "#6B7280",
@@ -257,12 +240,8 @@ export default function Hero() {
 
           {/* Floating Card 2: Learning Progress (Exact Figma: 232x131, r:16, p:16, gap:8, Poppins 48px 600 120% -1%) */}
           <div
-            className="absolute z-30 top-[60px] sm:top-[85px] md:top-[105px] lg:top-[136px] right-[4%] sm:right-[10%] md:right-[16%] lg:right-[220px] bg-white rounded-[16px] p-[16px] shadow-[0px_10px_30px_rgba(0,0,0,0.12)] border border-gray-100/80 flex flex-col justify-between select-none"
+            className="absolute z-30 top-[80px] sm:top-[100px] md:top-[115px] lg:top-[136px] right-[10%] sm:right-[15%] md:right-[18%] lg:right-[220px] bg-white rounded-lg lg:rounded-[16px] p-2 lg:p-[16px] shadow-[0px_10px_30px_rgba(0,0,0,0.12)] border border-gray-100/80 flex flex-col justify-between select-none w-[120px] sm:w-[160px] lg:w-[232px] h-[65px] sm:h-[85px] lg:h-[131px]"
             style={{
-              width: "232px",
-              height: "131px",
-              borderRadius: "16px",
-              padding: "16px",
               background: "#FFFFFF",
               backdropFilter: "blur(20px)",
               WebkitBackdropFilter: "blur(20px)",
@@ -270,10 +249,10 @@ export default function Hero() {
             }}
           >
             <span
+              className="text-[7px] sm:text-[10px] lg:text-[14px]"
               style={{
                 fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
                 fontWeight: 500,
-                fontSize: "14px",
                 lineHeight: "120%",
                 letterSpacing: "0%",
                 color: "#6B7280",
@@ -282,12 +261,10 @@ export default function Hero() {
               Learning Progress
             </span>
             <span
+              className="text-[24px] sm:text-[32px] lg:text-[48px]"
               style={{
-                width: "96px",
-                height: "58px",
                 fontFamily: "var(--font-poppins), 'Poppins', sans-serif",
                 fontWeight: 600,
-                fontSize: "48px",
                 lineHeight: "120%",
                 letterSpacing: "-1%",
                 verticalAlign: "middle",
@@ -309,12 +286,8 @@ export default function Hero() {
 
           {/* Floating Card 3: Happy Students (Exact Figma: 258x121, r:16, p:16, gap:8, Satoshi 16px 500, Image 232x43) */}
           <div
-            className="absolute z-30 top-[240px] sm:top-[270px] md:top-[300px] lg:top-[322px] left-[2%] sm:left-[6%] md:left-[10%] lg:left-[182px] bg-white rounded-[16px] p-[16px] shadow-[0px_10px_30px_rgba(0,0,0,0.12)] border border-gray-100/80 flex flex-col justify-between select-none"
+            className="absolute z-30 top-[180px] sm:top-[200px] md:top-[240px] lg:top-[322px] left-[6%] sm:left-[12%] md:left-[14%] lg:left-[182px] bg-white rounded-lg lg:rounded-[16px] p-2 lg:p-[16px] shadow-[0px_10px_30px_rgba(0,0,0,0.12)] border border-gray-100/80 flex flex-col justify-between select-none w-[130px] sm:w-[170px] lg:w-[258px] h-[70px] sm:h-[85px] lg:h-[121px]"
             style={{
-              width: "258px",
-              height: "121px",
-              borderRadius: "16px",
-              padding: "16px",
               background: "#FFFFFF",
               backdropFilter: "blur(20px)",
               WebkitBackdropFilter: "blur(20px)",
@@ -323,12 +296,10 @@ export default function Hero() {
           >
             <div className="flex items-center justify-between">
               <span
+                className="text-[10px] sm:text-[12px] lg:text-[16px]"
                 style={{
-                  width: "115px",
-                  height: "19px",
                   fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
                   fontWeight: 500,
-                  fontSize: "16px",
                   lineHeight: "120%",
                   letterSpacing: "0%",
                   verticalAlign: "middle",
@@ -342,10 +313,10 @@ export default function Hero() {
             </div>
             <div className="flex items-center gap-[4px] -mt-[2px]">
               <span
+                className="text-[9px] sm:text-[11px] lg:text-[12px]"
                 style={{
                   fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
                   fontWeight: 500,
-                  fontSize: "12px",
                   lineHeight: "100%",
                   letterSpacing: "0%",
                   color: "#18181B",
@@ -356,10 +327,10 @@ export default function Hero() {
                 4.5
               </span>
               <span
+                className="text-[8px] sm:text-[10px] lg:text-[12px]"
                 style={{
                   fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
                   fontWeight: 400,
-                  fontSize: "12px",
                   lineHeight: "100%",
                   letterSpacing: "0%",
                   color: "#6B7280",
@@ -369,16 +340,14 @@ export default function Hero() {
               >
                 (240)
               </span>
-              <div className="inline-flex items-center justify-center shrink-0">
+              <div className="inline-flex items-center justify-center shrink-0 w-2 sm:w-3 lg:w-[16px]">
                 <Image
                   src="/icons/Star.svg"
                   alt="Rating Star"
                   width={16}
                   height={16}
-                  className="w-[16px] h-[16px] object-contain shrink-0"
+                  className="w-full h-auto object-contain shrink-0"
                   style={{
-                    width: "16px",
-                    height: "16px",
                     borderRadius: "0.5px",
                     opacity: 1,
                   }}
@@ -387,11 +356,7 @@ export default function Hero() {
             </div>
             {/* Overlapping Avatars with 2K+ indicator (Exact Figma: 232x43) */}
             <div
-              className="overflow-hidden flex items-center"
-              style={{
-                width: "232px",
-                height: "43px",
-              }}
+              className="overflow-hidden flex items-center w-full lg:w-[232px] h-auto lg:h-[43px]"
             >
               <Image
                 src="/images/Auto Layout Horizontal .png"
@@ -407,13 +372,7 @@ export default function Hero() {
 
       {/* 6. Bottom-Right: White Spring Coil (mask-group3.svg - Sitting directly on top of the Ellipse) */}
       <div
-        className="absolute z-30 pointer-events-none select-none bottom-[20px] sm:bottom-[30px] lg:bottom-[45px] -right-[15px] w-[180px] sm:w-[250px] lg:w-[331.53px] lg:h-[331.53px]"
-        style={{
-          width: "331.53px",
-          height: "331.53px",
-          right: "-30px",
-          opacity: 1,
-        }}
+        className="absolute z-20 pointer-events-none select-none bottom-[20px] sm:bottom-[30px] lg:bottom-[45px] -right-[5px] sm:-right-[10px] lg:-right-[30px] w-[100px] sm:w-[150px] lg:w-[331.53px] lg:h-[331.53px]"
       >
         <Image
           src="/icons/mask-group3.svg"

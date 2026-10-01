@@ -13,11 +13,7 @@ export const metadata: Metadata = {
 export default function SignupPage() {
   return (
     <div
-      className="relative w-full flex justify-center selection:bg-[#D4FB20] selection:text-black overflow-x-hidden"
-      style={{
-        backgroundColor: "#003BE2",
-        minHeight: "1024px",
-      }}
+      className="relative w-full flex justify-center overflow-x-hidden min-h-[1024px] bg-[#003BE2]"
     >
       {/* Blueprint Grid Background */}
       <div
@@ -33,21 +29,13 @@ export default function SignupPage() {
         aria-hidden="true"
       />
 
-      {/* Main Content Wrapper (1440x1024 exact constraints) */}
+      {/* Main Content Wrapper (1440x1024 exact constraints on desktop) */}
       <div
-        className="relative z-10 w-full"
-        style={{
-          maxWidth: "1440px",
-          height: "1024px",
-        }}
+        className="relative z-10 w-full max-w-[1440px] h-auto lg:h-[1024px] flex flex-col lg:block items-center pb-[60px] lg:pb-0"
       >
         {/* Header Container */}
         <header
-          className="absolute"
-          style={{
-            top: "35px",
-            left: "122px",
-          }}
+          className="relative lg:absolute mt-8 lg:mt-0 lg:top-[35px] lg:left-[122px] self-start ml-6 lg:ml-0"
         >
           <Link href="/">
             <div style={{ width: "29px", height: "32px" }}>
@@ -64,34 +52,24 @@ export default function SignupPage() {
 
         {/* Left Text Frame */}
         <div
-          className="absolute flex flex-col"
-          style={{
-            width: "475px",
-            height: "127px",
-            top: "120px",
-            left: "122px",
-            gap: "16px",
-          }}
+          className="relative lg:absolute flex flex-col mt-8 lg:mt-0 lg:top-[120px] lg:left-[122px] w-full max-w-[475px] px-6 lg:px-0 gap-4"
         >
           <h1
+            className="text-[20px] lg:text-[20px] whitespace-nowrap"
             style={{
-              width: "202px",
-              height: "24px",
               fontFamily: "var(--font-poppins), 'Poppins', sans-serif",
               fontWeight: 600,
               fontSize: "20px",
               lineHeight: "120%",
               letterSpacing: "-0.01em",
               color: "#F5F5F6",
-              whiteSpace: "nowrap",
             }}
           >
             Sign up and come in
           </h1>
           <p
+            className="text-[16px] sm:text-[18px] w-full lg:w-[475px]"
             style={{
-              width: "475px",
-              height: "87px",
               fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
               fontWeight: 400,
               fontSize: "18px",
@@ -105,13 +83,7 @@ export default function SignupPage() {
 
         {/* Left Visual Area / Cards Container */}
         <div
-          className="absolute"
-          style={{
-            width: "548px",
-            height: "585px",
-            top: "305px",
-            left: "97px",
-          }}
+          className="relative lg:absolute mt-8 lg:mt-0 lg:top-[305px] lg:left-[97px] w-[548px] h-[585px] transform scale-[0.6] sm:scale-[0.8] lg:scale-100 origin-top shrink-0"
         >
           {/* Lower Card (Background) */}
           <div
@@ -157,11 +129,11 @@ export default function SignupPage() {
 
           {/* Green Ring */}
           <div
-            className="absolute z-30 pointer-events-none"
+            className="absolute z-30 pointer-events-none max-lg:translate-y-[25px] max-lg:translate-x-[38px]"
             style={{
               width: "150px",
               height: "150px",
-              top: "15px", // Visually overlapping top-left of upper card
+              top: "15px",
               left: "52px",
             }}
           >
@@ -175,7 +147,7 @@ export default function SignupPage() {
 
           {/* White Scribble */}
           <div
-            className="absolute pointer-events-none z-40"
+            className="absolute pointer-events-none z-40 max-lg:-translate-y-[40px] max-lg:-translate-x-[70px]"
             style={{
               width: "180px",
               height: "180px",
@@ -193,12 +165,12 @@ export default function SignupPage() {
 
           {/* Happy Students Rectangle */}
           <div
-            className="absolute flex flex-col justify-center z-30"
+            className="absolute flex flex-col justify-center z-30 max-lg:-translate-y-[75px] max-lg:-translate-x-[51px]"
             style={{
               width: "258px",
               height: "123px",
-              top: "435px", // 740 - 305
-              left: "251px", // 348 - 97
+              top: "435px",
+              left: "251px",
               backgroundColor: "#D4FB20",
               borderRadius: "16px",
               padding: "16px",
@@ -258,11 +230,11 @@ export default function SignupPage() {
 
           {/* Green Ring */}
           <div
-            className="absolute z-30 pointer-events-none"
+            className="absolute z-30 pointer-events-none max-lg:-translate-y-[60px] max-lg:translate-x-[30px]"
             style={{
               width: "200px",
               height: "190px",
-              top: "400px", // Visually overlapping bottom-left of lower card
+              top: "400px",
               left: "-10px",
             }}
           >
@@ -277,22 +249,10 @@ export default function SignupPage() {
 
         {/* Right Form Frame */}
         <div
-          className="absolute bg-white flex flex-col items-center justify-center"
-          style={{
-            width: "579px",
-            height: "784px",
-            top: "120px",
-            left: "741px",
-            borderRadius: "24px",
-            boxShadow: "0px 12px 32px rgba(0, 0, 0, 0.05)",
-          }}
+          className="relative lg:absolute bg-white flex flex-col items-center justify-center mt-[-60px] sm:mt-[-20px] lg:mt-0 lg:top-[120px] lg:left-[741px] w-[90%] sm:w-[579px] h-auto lg:h-[784px] rounded-[24px] shadow-[0px_12px_32px_rgba(0,0,0,0.05)] py-10 lg:py-0 px-6 sm:px-0"
         >
           <div
-            className="flex flex-col justify-between"
-            style={{
-              width: "453px",
-              height: "672px",
-            }}
+            className="flex flex-col justify-between w-full sm:w-[453px] h-auto lg:h-[672px]"
           >
             <div className="flex flex-col">
               {/* Header */}
@@ -337,21 +297,13 @@ export default function SignupPage() {
 
             {/* Bottom Text */}
             <div
-              className="flex justify-center items-center"
-              style={{
-                width: "100%",
-                height: "26px",
-              }}
+              className="flex justify-center items-center mt-8 lg:mt-0 w-full h-[26px]"
             >
               <span
+                className="flex items-center gap-1 text-[14px] sm:text-[16px] text-[#6B7280]"
                 style={{
                   fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
                   fontWeight: 400,
-                  fontSize: "16px",
-                  color: "#6B7280",
-                  display: "flex",
-                  gap: "4px",
-                  alignItems: "center",
                 }}
               >
                 Already have an account?

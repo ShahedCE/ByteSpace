@@ -36,26 +36,17 @@ export default function Testimonial() {
       }}
     >
       <div
-        className="relative mx-auto flex flex-col"
-        style={{
-          width: "1204px",
-          maxWidth: "100%",
-        }}
+        className="relative mx-auto flex flex-col w-full max-w-[1204px]"
       >
         {/* Top Text Row */}
         <div
-          className="flex justify-between w-full"
-          style={{
-            marginTop: "74px", // Paragraph starts at 74px from top
-          }}
+          className="flex flex-col lg:flex-row justify-between w-full px-6 lg:px-0 mt-10 lg:mt-[74px] gap-6 lg:gap-0"
         >
           <h2
+            className="w-full lg:w-[577px] mt-0 lg:mt-[36px] text-[28px] sm:text-[36px] lg:text-[44px]"
             style={{
-              width: "577px",
-              marginTop: "36px", // (110 - 74 = 36px) to place heading at 110px from top
               fontFamily: "var(--font-poppins), 'Poppins', sans-serif",
               fontWeight: 600,
-              fontSize: "44px",
               lineHeight: "120%",
               letterSpacing: "-0.01em",
               color: "#000000",
@@ -65,11 +56,10 @@ export default function Testimonial() {
           </h2>
 
           <p
+            className="w-full lg:w-[580px] text-[14px] sm:text-[16px] lg:text-[18px]"
             style={{
-              width: "580px",
               fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
               fontWeight: 400,
-              fontSize: "18px",
               lineHeight: "160%",
               color: "#4F4F4F",
             }}
@@ -80,12 +70,7 @@ export default function Testimonial() {
 
         {/* Cards Row */}
         <div
-          className="flex w-full"
-          style={{
-            marginTop: "72px",
-            marginBottom: "60px",
-            gap: "41px",
-          }}
+          className="flex flex-col lg:flex-row w-full px-6 lg:px-0 mt-[40px] lg:mt-[72px] mb-[40px] lg:mb-[60px] gap-6 lg:gap-[41px]"
         >
           {[
             {

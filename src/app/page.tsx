@@ -10,7 +10,7 @@ import Testimonial from "@/components/sections/Testimonial";
 
 export default function HomePage() {
   return (
-    <div className="relative min-h-screen flex flex-col bg-white selection:bg-[#D4FB20] selection:text-black overflow-x-hidden">
+    <div className="relative min-h-screen flex flex-col bg-white overflow-x-hidden">
       {/* Hero Section Container with Blue Background & Blueprint Grid (Ends at the base of the ellipse) */}
       <div className="relative w-full bg-[#003BE2]">
         {/* Continuous Blueprint Grid starting strictly from the left edge (0, 0) so no cut boxes appear on the left */}

@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <header className="relative z-50 w-full h-[120px] bg-transparent">
-      <div className="w-full max-w-[1440px] h-full mx-auto px-6 sm:px-10 md:px-[120px] flex items-center justify-between">
+      <div className="w-full max-w-[1440px] h-full mx-auto px-6 sm:px-10 md:px-12 lg:px-[120px] flex items-center justify-between">
         {/* Brand Logo & Name */}
         <Link
           href="/"
@@ -41,7 +41,7 @@ export default function Navbar() {
         </Link>
 
         {/* Center Navigation Links (Desktop) */}
-        <nav className="hidden md:flex items-center gap-[24px] md:translate-x-8 lg:translate-x-8">
+        <nav className="hidden lg:flex items-center gap-[24px] lg:translate-x-8">
           {navItems.map((item) => {
             const isSelected = activeTab === item.name;
             return (
@@ -62,7 +62,7 @@ export default function Navbar() {
         </nav>
 
         {/* Right Actions: Sign In, Join Us, Cart Icon */}
-        <div className="hidden md:flex items-center gap-[24px] md:translate-x-6 lg:translate-x-10">
+        <div className="hidden lg:flex items-center gap-[24px] lg:translate-x-10">
           <Link
             href="/login"
             className="inline-flex items-center justify-center h-[26px] text-[#F5F5F6] text-[16px] font-normal leading-[160%] tracking-[0%] font-satoshi transition-colors hover:text-white"
@@ -93,7 +93,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Hamburger Button */}
-        <div className="flex md:hidden items-center gap-4">
+        <div className="flex lg:hidden items-center gap-4">
           <button
             type="button"
             aria-label="Shopping Cart"
@@ -140,8 +140,24 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#0033c4] border-t border-blue-500/30 px-6 py-6 space-y-4">
-          <nav className="flex flex-col space-y-3">
+        <div className="lg:hidden fixed inset-0 bg-[#003BE2] z-50 flex flex-col items-center pt-[120px]">
+          {/* Close Button */}
+          <button
+            onClick={() => setMobileMenuOpen(false)}
+            className="absolute top-[48px] right-[24px] sm:right-[40px] text-white p-2"
+            aria-label="Close menu"
+          >
+            <svg
+              className="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          <nav className="flex flex-col items-center space-y-6">
             {navItems.map((item) => {
               const isSelected = activeTab === item.name;
               return (
@@ -152,26 +168,27 @@ export default function Navbar() {
                     setActiveTab(item.name);
                     setMobileMenuOpen(false);
                   }}
-                  className={`text-base transition-colors ${isSelected ? "text-white font-normal" : "text-white/85"
-                    }`}
+                  className={`text-[24px] sm:text-[28px] transition-colors ${
+                    isSelected ? "text-white font-medium" : "text-white/80 hover:text-white"
+                  }`}
                 >
                   {item.name}
                 </Link>
               );
             })}
           </nav>
-          <div className="pt-4 border-t border-blue-500/30 flex items-center gap-6">
+          <div className="mt-10 flex flex-col items-center gap-6">
             <Link
               href="/login"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-white text-sm"
+              className="text-white text-[18px] hover:text-white/80"
             >
               Sign In
             </Link>
             <Link
               href="/signup"
               onClick={() => setMobileMenuOpen(false)}
-              className="px-4 py-2 bg-[#D4FB20] text-black text-sm font-semibold rounded-full"
+              className="px-8 py-3 bg-[#D4FB20] text-black text-[18px] font-semibold rounded-full hover:bg-[#bce600]"
             >
               Join Us
             </Link>

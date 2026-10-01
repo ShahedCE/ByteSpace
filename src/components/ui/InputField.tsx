@@ -6,7 +6,7 @@ interface InputFieldProps extends React.InputHTMLAttributes<HTMLInputElement> {
 
 export default function InputField({ label, ...props }: InputFieldProps) {
   return (
-    <div className="flex flex-col group" style={{ width: "453px", height: "77px", gap: "8px" }}>
+    <div className="flex flex-col group w-full lg:max-w-[453px]" style={{ height: "77px", gap: "8px" }}>
       <label
         className="text-[#242528] group-focus-within:text-[#b5d61a] group-focus-within:-translate-y-1 transform transition-all duration-300 ease-out"
         style={{

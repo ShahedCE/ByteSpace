@@ -15,15 +15,7 @@ export default function TestimonialCard({
 }: TestimonialCardProps) {
   return (
     <div
-      className="flex flex-col"
-      style={{
-        width: "374px",
-        height: "432px",
-        backgroundColor: "#FFFFFF",
-        borderRadius: "24px",
-        padding: "24px",
-        gap: "24px",
-      }}
+      className="flex flex-col shrink-0 w-full lg:max-w-[374px] h-auto lg:h-[432px] p-6 bg-white rounded-[24px] gap-6"
     >
       <img
         src={image}
@@ -37,10 +29,10 @@ export default function TestimonialCard({
       />
       <div className="flex flex-col">
         <h3
+          className="text-[18px] lg:text-[20px]"
           style={{
             fontFamily: "var(--font-poppins), 'Poppins', sans-serif",
             fontWeight: 600,
-            fontSize: "20px",
             lineHeight: "120%",
             letterSpacing: "-0.01em",
             color: "#000000",
@@ -49,11 +41,10 @@ export default function TestimonialCard({
           {name}
         </h3>
         <span
+          className="mt-1 text-[16px] lg:text-[18px]"
           style={{
-            marginTop: "4px",
             fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
             fontWeight: 400,
-            fontSize: "18px",
             lineHeight: "160%",
             color: "#003BE2",
           }}
@@ -62,10 +53,10 @@ export default function TestimonialCard({
         </span>
       </div>
       <p
+        className="text-[14px] sm:text-[16px] lg:text-[18px]"
         style={{
           fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
           fontWeight: 400,
-          fontSize: "18px",
           lineHeight: "160%",
           color: "#4F4F4F",
         }}
