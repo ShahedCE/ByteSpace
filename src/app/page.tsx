@@ -6,6 +6,7 @@ import Discover from "@/components/sections/Discover";
 import Explore from "@/components/sections/Explore";
 import ProfessionalGrowth from "@/components/sections/ProfessionalGrowth";
 import CTA from "@/components/sections/CTA";
+import Testimonial from "@/components/sections/Testimonial";
 
 export default function HomePage() {
   return (
@@ -39,6 +40,7 @@ export default function HomePage() {
         <Explore />
         <ProfessionalGrowth />
         <CTA />
+        <Testimonial />
       </main>
       <Footer />
     </div>
