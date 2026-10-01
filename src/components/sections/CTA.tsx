@@ -23,7 +23,7 @@ export default function CTA() {
         <img
           src="/icons/cta/left-top.png"
           alt="Top Left Spring"
-          className="absolute top-0 left-0 w-[80px] h-[70px] sm:w-[150px] sm:h-[130px] lg:w-[260px] lg:h-[230px] object-contain pointer-events-none"
+          className="absolute top-0 left-0 w-[80px] h-[70px] sm:w-[150px] sm:h-[130px] lg:w-[260px] lg:h-[220px] object-contain pointer-events-none"
         />
         <img
           src="/icons/cta/top-2ndleft.png"
