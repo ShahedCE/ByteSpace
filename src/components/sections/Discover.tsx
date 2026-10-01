@@ -110,7 +110,7 @@ export default function Discover() {
 
       {/* Course Cards Grid Container */}
       <div 
-        className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 justify-center lg:justify-start w-full max-w-[1199px] h-auto mt-10 lg:mt-[77px] gap-4 md:gap-6 lg:gap-[40px]"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center lg:justify-start w-full max-w-[1199px] h-auto mt-10 lg:mt-[77px] gap-6 lg:gap-[40px]"
       >
         {[
           {
