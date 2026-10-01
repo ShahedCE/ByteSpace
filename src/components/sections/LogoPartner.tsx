@@ -17,20 +17,19 @@ export default function LogoPartner() {
     >
       <div className="w-full max-w-[1440px] mx-auto flex justify-center items-center px-4 sm:px-6">
         <div
-          className="w-full max-w-[1132px] h-auto lg:h-[42px] flex flex-wrap lg:flex-nowrap items-center justify-center lg:justify-between gap-8 sm:gap-10 lg:gap-[72px]"
+          className="w-full max-w-[1132px] h-auto lg:h-[42px] flex flex-nowrap items-center justify-between gap-2 sm:gap-6 lg:gap-[72px]"
         >
           {partnerLogos.map((logo, index) => (
             <div
               key={index}
-              className="flex items-center justify-center shrink-0"
-              style={{ height: "41px" }}
+              className="flex items-center justify-center flex-1"
             >
               <Image
                 src={logo.src}
                 alt={logo.name}
                 width={logo.width}
                 height={logo.height}
-                className="h-[41px] w-auto object-contain select-none pointer-events-none opacity-100 transition-opacity hover:opacity-80"
+                className="w-full max-w-[170px] h-auto object-contain select-none pointer-events-none opacity-100 transition-opacity hover:opacity-80"
                 priority
               />
             </div>

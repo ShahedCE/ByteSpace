@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
   return (
-    <div className="relative w-full flex flex-col bg-[#003BE2] overflow-x-hidden selection:bg-[#D4FB20] selection:text-black">
+    <div className="relative w-full flex flex-col bg-[#003BE2] overflow-x-hidden">
       {/* Background Blueprint Grid */}
       <div
         className="absolute inset-0 pointer-events-none select-none z-0"
@@ -29,21 +29,14 @@ export default function NotFound() {
       {/* Main Content Area */}
       <div className="relative z-10 w-full flex justify-center">
         <div 
-          className="relative w-full flex flex-col"
-          style={{ maxWidth: "1440px", height: "957px" }}
+          className="relative w-full flex flex-col items-center lg:block pb-[60px] lg:pb-0 h-auto lg:h-[957px]"
+          style={{ maxWidth: "1440px" }}
         >
           <Navbar />
 
           {/* 404 Image Graphic */}
           <div
-            className="absolute"
-            style={{
-              width: "920px",
-              height: "480px",
-              top: "160px",
-              left: "260px",
-              zIndex: 1,
-            }}
+            className="relative lg:absolute w-full sm:w-[80%] lg:w-[920px] h-[300px] sm:h-[400px] lg:h-[480px] mt-10 lg:mt-0 lg:top-[160px] lg:left-[260px] z-[1]"
           >
             <Image
               src="/images/404.png"
@@ -55,19 +48,13 @@ export default function NotFound() {
 
           {/* Texts overlaid on 404 */}
           <div
-            className="absolute flex flex-col items-center w-full"
-            style={{
-              zIndex: 10,
-              bottom: "125px",
-            }}
+            className="relative lg:absolute flex flex-col items-center w-full z-10 lg:bottom-[125px] mt-6 lg:mt-0 px-6 lg:px-0"
           >
             <h1
+              className="w-full lg:w-[935px] text-[36px] sm:text-[48px] lg:text-[72px]"
               style={{
-                width: "935px",
-                height: "172px",
                 fontFamily: "var(--font-poppins), 'Poppins', sans-serif",
                 fontWeight: 600,
-                fontSize: "72px",
                 lineHeight: "120%",
                 letterSpacing: "-0.01em",
                 color: "#FFFFFF",
@@ -79,12 +66,10 @@ export default function NotFound() {
             </h1>
 
             <p
+              className="w-full lg:w-[486px] text-[16px] sm:text-[18px]"
               style={{
-                width: "486px",
-                height: "29px",
                 fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
                 fontWeight: 400,
-                fontSize: "18px",
                 lineHeight: "160%",
                 color: "#E5E6E8",
                 textAlign: "center",

@@ -4,21 +4,12 @@ import React from "react";
 export default function CTA() {
   return (
     <section
-      className="relative w-full flex justify-center items-center overflow-hidden"
-      style={{
-        backgroundColor: "#003BE2",
-        // The section itself is full width but we enforce 1440x488 layout height
-        minHeight: "488px",
-      }}
+      className="relative w-full flex justify-center items-center overflow-hidden bg-[#003BE2] min-h-auto lg:min-h-[488px]"
     >
       {/* 1440px Container with Grid and Content */}
       <div
-        className="relative w-full"
+        className="relative w-full max-w-[1440px] h-auto lg:h-[488px] mx-auto pb-[60px] lg:pb-0"
         style={{
-          width: "1440px",
-          maxWidth: "1440px",
-          height: "488px",
-          margin: "0 auto",
           // Grid lines: 12 columns, 4 rows
           backgroundImage: `
             linear-gradient(to right, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
@@ -32,95 +23,48 @@ export default function CTA() {
         <img
           src="/icons/cta/left-top.png"
           alt="Top Left Spring"
-          className="absolute"
-          style={{
-            width: "260px",
-            height: "230px",
-            top: "0px",
-            left: "0px",
-          }}
+          className="absolute top-0 left-0 w-[80px] h-[70px] sm:w-[150px] sm:h-[130px] lg:w-[260px] lg:h-[230px] object-contain pointer-events-none"
         />
         <img
           src="/icons/cta/top-2ndleft.png"
           alt="Top 2nd Left Spring"
-          className="absolute"
-          style={{
-            width: "175px",
-            height: "175px",
-            top: "5px",
-            left: "178px",
-          }}
+          className="absolute top-[5px] left-[60px] sm:left-[100px] lg:left-[178px] w-[50px] h-[50px] sm:w-[100px] sm:h-[100px] lg:w-[175px] lg:h-[175px] object-contain pointer-events-none"
         />
         <img
           src="/icons/cta/middle-left.png"
           alt="Middle Left Cone"
-          className="absolute"
-          style={{
-            width: "140px",
-            height: "190px",
-            top: "230px",
-            left: "0px",
-          }}
+          className="absolute top-[100px] sm:top-[160px] lg:top-[230px] left-0 w-[45px] h-[60px] sm:w-[80px] sm:h-[110px] lg:w-[140px] lg:h-[190px] object-contain pointer-events-none"
         />
         <img
           src="/icons/cta/left-bottom.png"
           alt="Left Bottom Ring"
-          className="absolute"
-          style={{
-            width: "340px",
-            height: "200px",
-            bottom: "-10px",
-            left: "30px",
-          }}
+          className="absolute -bottom-[5px] lg:-bottom-[10px] left-[10px] lg:left-[30px] w-[100px] h-[60px] sm:w-[200px] sm:h-[120px] lg:w-[340px] lg:h-[200px] object-contain object-bottom pointer-events-none"
         />
         <img
           src="/icons/cta/most-right.png"
           alt="Most Right Cylinder"
-          className="absolute"
-          style={{
-            width: "210px",
-            height: "360px",
-            top: "20px",
-            right: "-5px",
-          }}
+          className="absolute top-[10px] lg:top-[20px] -right-[2px] lg:-right-[5px] w-[60px] h-[100px] sm:w-[120px] sm:h-[200px] lg:w-[210px] lg:h-[360px] object-contain pointer-events-none"
         />
         <img
           src="/icons/cta/top-2nd right.png"
           alt="Top 2nd Right Pyramid"
-          className="absolute"
-          style={{
-            width: "190px",
-            height: "190px",
-            top: "5px",
-            right: "150px",
-          }}
+          className="absolute top-[5px] right-[40px] sm:right-[80px] lg:right-[150px] w-[60px] h-[60px] sm:w-[110px] sm:h-[110px] lg:w-[190px] lg:h-[190px] object-contain pointer-events-none"
         />
         <img
           src="/icons/cta/right-bottom.png"
           alt="Right Bottom Spring"
-          className="absolute"
-          style={{
-            width: "310px",
-            height: "200px",
-            bottom: "0px",
-            right: "0px",
-          }}
+          className="absolute bottom-0 right-0 w-[90px] h-[60px] sm:w-[180px] sm:h-[120px] lg:w-[310px] lg:h-[200px] object-contain object-bottom pointer-events-none"
         />
 
         {/* Text Content */}
         <div
-          className="relative z-10 flex flex-col items-center"
-          style={{
-            marginTop: "85px",
-          }}
+          className="relative z-10 flex flex-col items-center px-6 lg:px-0 mt-[40px] lg:mt-[85px]"
         >
           <h2
+            className="w-full lg:w-[710px] text-[24px] sm:text-[36px] lg:text-[44px]"
             style={{
-              width: "710px",
-              maxWidth: "100%",
               fontFamily: "var(--font-poppins), 'Poppins', sans-serif",
               fontWeight: 600,
-              fontSize: "44px",
               lineHeight: "120%",
               letterSpacing: "-0.01em",
               textAlign: "center",
@@ -131,13 +75,10 @@ export default function CTA() {
           </h2>
 
           <p
+            className="w-full lg:w-[964px] text-[14px] sm:text-[16px] lg:text-[18px] mt-4 sm:mt-6 lg:mt-[40px]"
             style={{
-              width: "964px",
-              maxWidth: "100%",
-              marginTop: "40px",
               fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
               fontWeight: 400,
-              fontSize: "18px",
               lineHeight: "160%",
               textAlign: "center",
               color: "#F5F5F6",
@@ -147,22 +88,18 @@ export default function CTA() {
           </p>
 
           <button
-            className="flex justify-center items-center hover:opacity-90 transition-opacity"
+            className="flex justify-center items-center hover:opacity-90 transition-opacity mt-6 sm:mt-8 lg:mt-[40px] mb-[40px] sm:mb-[60px] lg:mb-[84px] w-[150px] sm:w-[172px] h-[40px] sm:h-[46px]"
             style={{
-              width: "172px",
-              height: "46px",
-              marginTop: "40px",
-              marginBottom: "84px", // Gap to bottom
               backgroundColor: "#D4FB20",
               borderRadius: "24px",
               gap: "8px",
             }}
           >
             <span
+              className="text-[14px] lg:text-[16px]"
               style={{
                 fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
                 fontWeight: 500,
-                fontSize: "18px",
                 lineHeight: "120%",
                 color: "#242528",
               }}

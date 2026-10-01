@@ -2,9 +2,8 @@
 export default function ProfessionalGrowth() {
   return (
     <section
-      className="relative w-full overflow-hidden"
+      className="relative w-full overflow-hidden h-auto lg:h-[1440px]"
       style={{
-        height: "1440px", // Forces the section to be this tall, cutting off the rest due to overflow-hidden
         backgroundColor: "#ECEEF8",
         backgroundImage: `
           radial-gradient(
@@ -55,32 +54,18 @@ export default function ProfessionalGrowth() {
     >
       {/* Container for the top part */}
       <div
-        className="relative mx-auto flex"
-        style={{
-          width: "1202px",
-          maxWidth: "100%",
-          paddingTop: "120px", // Base top padding for the image
-          gap: "65px",
-        }}
+        className="relative mx-auto flex flex-col lg:flex-row w-full max-w-[1202px] px-6 lg:px-0 pt-[60px] lg:pt-[120px] gap-[40px] lg:gap-[65px]"
       >
         {/* Left Portion: Text & Stats */}
         <div
-          className="flex flex-col shrink-0"
-          style={{
-            marginTop: "74px",
-            width: "574px",
-            height: "404px",
-            gap: "40px"
-          }}
+          className="flex flex-col items-center text-center lg:items-start lg:text-left shrink-0 w-full lg:w-[574px] lg:h-[404px] mt-[20px] lg:mt-[74px] gap-[30px] lg:gap-[40px]"
         >
           {/* Heading */}
           <h2
+            className="w-full lg:w-[574px] lg:h-[106px] text-[28px] sm:text-[36px] lg:text-[44px]"
             style={{
-              width: "574px",
-              height: "106px",
               fontFamily: "var(--font-poppins), 'Poppins', sans-serif",
               fontWeight: 600,
-              fontSize: "44px",
               lineHeight: "120%",
               letterSpacing: "-0.01em",
               color: "#040819",
@@ -91,12 +76,10 @@ export default function ProfessionalGrowth() {
 
           {/* Subheading */}
           <p
+            className="w-full lg:w-[477px] lg:h-[145px] text-[16px] sm:text-[18px]"
             style={{
-              width: "477px",
-              height: "145px",
               fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
               fontWeight: 400,
-              fontSize: "18px",
               lineHeight: "160%",
               color: "#82868E",
             }}
@@ -106,19 +89,15 @@ export default function ProfessionalGrowth() {
 
           {/* Stats */}
           <div
-            className="flex items-center"
-            style={{
-              gap: "56px"
-            }}
+            className="flex items-center justify-center lg:justify-start gap-[30px] lg:gap-[56px] w-full"
           >
             {/* Stat 1 */}
             <div className="flex flex-col" style={{ gap: "4px" }}>
               <span
+                className="text-[28px] sm:text-[36px] leading-[120%] lg:leading-[44px]"
                 style={{
                   fontFamily: "var(--font-poppins), 'Poppins', sans-serif",
                   fontWeight: 500,
-                  fontSize: "36px",
-                  lineHeight: "44px",
                   letterSpacing: "-0.01em",
                   color: "#003BE2",
                 }}
@@ -126,10 +105,10 @@ export default function ProfessionalGrowth() {
                 12K
               </span>
               <span
+                className="text-[14px] sm:text-[18px]"
                 style={{
                   fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
                   fontWeight: 400,
-                  fontSize: "18px",
                   lineHeight: "160%",
                   color: "#4B4C53",
                 }}
@@ -141,11 +120,10 @@ export default function ProfessionalGrowth() {
             {/* Stat 2 */}
             <div className="flex flex-col" style={{ gap: "4px" }}>
               <span
+                className="text-[28px] sm:text-[36px] leading-[120%] lg:leading-[44px]"
                 style={{
                   fontFamily: "var(--font-poppins), 'Poppins', sans-serif",
                   fontWeight: 500,
-                  fontSize: "36px",
-                  lineHeight: "44px",
                   letterSpacing: "-0.01em",
                   color: "#003BE2",
                 }}
@@ -153,10 +131,10 @@ export default function ProfessionalGrowth() {
                 70+
               </span>
               <span
+                className="text-[14px] sm:text-[18px]"
                 style={{
                   fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
                   fontWeight: 400,
-                  fontSize: "18px",
                   lineHeight: "160%",
                   color: "#4B4C53",
                 }}
@@ -168,11 +146,10 @@ export default function ProfessionalGrowth() {
             {/* Stat 3 */}
             <div className="flex flex-col" style={{ gap: "4px" }}>
               <span
+                className="text-[28px] sm:text-[36px] leading-[120%] lg:leading-[44px]"
                 style={{
                   fontFamily: "var(--font-poppins), 'Poppins', sans-serif",
                   fontWeight: 500,
-                  fontSize: "36px",
-                  lineHeight: "44px",
                   letterSpacing: "-0.01em",
                   color: "#003BE2",
                 }}
@@ -180,10 +157,10 @@ export default function ProfessionalGrowth() {
                 16
               </span>
               <span
+                className="text-[14px] sm:text-[18px]"
                 style={{
                   fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
                   fontWeight: 400,
-                  fontSize: "18px",
                   lineHeight: "160%",
                   color: "#4B4C53",
                 }}
@@ -196,13 +173,7 @@ export default function ProfessionalGrowth() {
 
         {/* Right Portion: Graphics */}
         <div
-          className="relative shrink-0"
-          style={{
-            width: "700px",
-            height: "720px",
-            marginTop: "-10px",
-            marginLeft: "-25px",
-          }}
+          className="relative shrink-0 w-full md:w-[80%] mx-auto lg:mx-0 lg:w-[700px] h-auto lg:h-[720px] mt-[40px] lg:mt-[-10px] lg:ml-[-25px]"
         >
           <img
             src="/images/right-image.png"
@@ -218,21 +189,11 @@ export default function ProfessionalGrowth() {
 
       {/* Container for the bottom part */}
       <div
-        className="relative mx-auto flex items-center"
-        style={{
-          width: "1202px",
-          maxWidth: "100%",
-          marginTop: "-120px", // Moved up even further
-          gap: "34px", // 580 + 34 = 614px (maintains right text alignment with man image)
-        }}
+        className="relative mx-auto flex flex-col-reverse lg:flex-row items-center w-full max-w-[1202px] px-6 lg:px-0 mt-[20px] lg:mt-[-120px] gap-[40px] lg:gap-[34px]"
       >
         {/* Left Portion: Image */}
         <div
-          className="relative shrink-0"
-          style={{
-            width: "580px", // Increased width
-            height: "750px", // Increased height
-          }}
+          className="relative shrink-0 w-full md:w-[80%] mx-auto lg:mx-0 lg:w-[580px] h-auto lg:h-[750px]"
         >
           <img
             src="/images/female-image.png"
@@ -248,23 +209,14 @@ export default function ProfessionalGrowth() {
 
         {/* Right Portion: Text Content */}
         <div
-          className="flex flex-col shrink-0"
-          style={{
-            width: "580px",
-            height: "388px",
-            gap: "40px",
-            marginTop: "-80px", // Moves the text portion up relative to the image
-            marginLeft: "5px", // Shifts text 5px to the right
-          }}
+          className="flex flex-col items-center text-center lg:items-start lg:text-left shrink-0 w-full lg:w-[580px] lg:h-[388px] gap-[30px] lg:gap-[40px] mt-[20px] lg:mt-[-80px] lg:ml-[5px]"
         >
           {/* Heading */}
           <h2
+            className="w-full lg:w-[391px] lg:h-[106px] text-[28px] sm:text-[36px] lg:text-[44px]"
             style={{
-              width: "391px",
-              height: "106px",
               fontFamily: "var(--font-poppins), 'Poppins', sans-serif",
               fontWeight: 600,
-              fontSize: "44px",
               lineHeight: "120%",
               letterSpacing: "-0.01em",
               color: "#040819",
@@ -275,17 +227,16 @@ export default function ProfessionalGrowth() {
 
           {/* Subheading */}
           <p
+            className="w-full max-w-[574px]"
             style={{
-              width: "574px",
-              height: "58px",
               color: "#4B4C53",
             }}
           >
             <span
+              className="text-[16px] sm:text-[18px]"
               style={{
                 fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
                 fontWeight: 700,
-                fontSize: "18px",
                 lineHeight: "160%",
                 color: "#242528",
               }}
@@ -293,10 +244,10 @@ export default function ProfessionalGrowth() {
               ByteSpace
             </span>
             <span
+              className="text-[16px] sm:text-[18px]"
               style={{
                 fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
                 fontWeight: 400,
-                fontSize: "18px",
                 lineHeight: "160%",
               }}
             >

@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import CourseCard from "@/components/sections/CourseCard";
+import CourseCard from "@/components/ui/CourseCard";
+import InputField from "@/components/ui/InputField";
+import PrimaryButton from "@/components/ui/PrimaryButton";
+import SocialButton from "@/components/ui/SocialButton";
 
 export const metadata: Metadata = {
   title: "Login | ByteSpace",
@@ -11,11 +14,7 @@ export const metadata: Metadata = {
 export default function LoginPage() {
   return (
     <div
-      className="relative w-full flex justify-center selection:bg-[#D4FB20] selection:text-black overflow-x-hidden"
-      style={{
-        backgroundColor: "#003BE2",
-        minHeight: "1024px",
-      }}
+      className="relative w-full flex justify-center overflow-x-hidden min-h-[1024px] bg-[#003BE2]"
     >
       {/* Blueprint Grid Background */}
       <div
@@ -31,21 +30,13 @@ export default function LoginPage() {
         aria-hidden="true"
       />
 
-      {/* Main Content Wrapper (1440x1024 exact constraints) */}
+      {/* Main Content Wrapper (1440x1024 exact constraints on desktop) */}
       <div
-        className="relative z-10 w-full"
-        style={{
-          maxWidth: "1440px",
-          height: "1024px",
-        }}
+        className="relative z-10 w-full max-w-[1440px] h-auto lg:h-[1024px] flex flex-col lg:block items-center pb-[60px] lg:pb-0"
       >
         {/* Header Container */}
         <header
-          className="absolute"
-          style={{
-            top: "35px",
-            left: "122px",
-          }}
+          className="relative lg:absolute mt-8 lg:mt-0 lg:top-[35px] lg:left-[122px] self-start ml-6 lg:ml-0"
         >
           <Link href="/">
             <div style={{ width: "29px", height: "32px" }}>
@@ -62,34 +53,24 @@ export default function LoginPage() {
 
         {/* Left Text Frame */}
         <div
-          className="absolute flex flex-col"
-          style={{
-            width: "475px",
-            height: "127px",
-            top: "120px",
-            left: "122px",
-            gap: "16px",
-          }}
+          className="relative lg:absolute flex flex-col mt-8 lg:mt-0 lg:top-[120px] lg:left-[122px] w-full max-w-[475px] px-6 lg:px-0 gap-4"
         >
           <h1
+            className="text-[20px] lg:text-[20px] whitespace-nowrap"
             style={{
-              width: "202px",
-              height: "24px",
               fontFamily: "var(--font-poppins), 'Poppins', sans-serif",
               fontWeight: 600,
               fontSize: "20px",
               lineHeight: "120%",
               letterSpacing: "-0.01em",
               color: "#F5F5F6",
-              whiteSpace: "nowrap",
             }}
           >
             Sign in with ease
           </h1>
           <p
+            className="text-[16px] sm:text-[18px] w-full lg:w-[475px]"
             style={{
-              width: "475px",
-              height: "87px",
               fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
               fontWeight: 400,
               fontSize: "18px",
@@ -103,13 +84,7 @@ export default function LoginPage() {
 
         {/* Left Visual Area / Cards Container */}
         <div
-          className="absolute"
-          style={{
-            width: "548px",
-            height: "585px",
-            top: "305px",
-            left: "97px",
-          }}
+          className="relative lg:absolute mt-8 lg:mt-0 lg:top-[305px] lg:left-[97px] w-[548px] h-[585px] transform scale-[0.6] sm:scale-[0.8] lg:scale-100 origin-top shrink-0"
         >
           {/* Lower Card (Background) */}
           <div
@@ -155,7 +130,7 @@ export default function LoginPage() {
 
           {/* Green Ring */}
           <div
-            className="absolute z-30 pointer-events-none"
+            className="absolute z-30 pointer-events-none max-lg:translate-y-[25px] max-lg:translate-x-[38px]"
             style={{
               width: "150px",
               height: "150px",
@@ -173,7 +148,7 @@ export default function LoginPage() {
 
           {/* White Scribble */}
           <div
-            className="absolute pointer-events-none z-40"
+            className="absolute pointer-events-none z-40 max-lg:-translate-y-[40px] max-lg:-translate-x-[70px]"
             style={{
               width: "180px",
               height: "180px",
@@ -191,7 +166,7 @@ export default function LoginPage() {
 
           {/* Happy Students Rectangle */}
           <div
-            className="absolute flex flex-col justify-center z-30"
+            className="absolute flex flex-col justify-center z-30 max-lg:-translate-y-[75px] max-lg:-translate-x-[51px]"
             style={{
               width: "258px",
               height: "123px",
@@ -256,7 +231,7 @@ export default function LoginPage() {
 
           {/* Green Ring */}
           <div
-            className="absolute z-30 pointer-events-none"
+            className="absolute z-30 pointer-events-none max-lg:-translate-y-[60px] max-lg:translate-x-[30px]"
             style={{
               width: "200px",
               height: "190px",
@@ -275,22 +250,10 @@ export default function LoginPage() {
 
         {/* Right Form Frame */}
         <div
-          className="absolute bg-white flex flex-col items-center justify-start"
-          style={{
-            width: "579px",
-            height: "784px",
-            top: "120px",
-            left: "741px",
-            borderRadius: "24px",
-            boxShadow: "0px 12px 32px rgba(0, 0, 0, 0.05)",
-            paddingTop: "60px",
-          }}
+          className="relative lg:absolute bg-white flex flex-col items-center justify-start mt-[-60px] sm:mt-[-20px] lg:mt-0 lg:top-[120px] lg:left-[741px] w-[90%] sm:w-[579px] h-auto lg:h-[784px] rounded-[24px] shadow-[0px_12px_32px_rgba(0,0,0,0.05)] pt-10 sm:pt-[60px] pb-[100px] lg:pb-0 px-6 sm:px-0"
         >
           <div
-            className="flex flex-col"
-            style={{
-              width: "453px",
-            }}
+            className="flex flex-col w-full sm:w-[453px]"
           >
             {/* Header */}
             <div className="flex flex-col" style={{ marginBottom: "40px" }}>
@@ -322,91 +285,12 @@ export default function LoginPage() {
 
             {/* Form Fields */}
             <div className="flex flex-col" style={{ gap: "24px" }}>
-              {/* Email */}
-              <div className="flex flex-col group" style={{ width: "453px", height: "77px", gap: "8px" }}>
-                <label
-                  className="text-[#242528] group-focus-within:text-[#b5d61a] group-focus-within:-translate-y-1 transform transition-all duration-300 ease-out"
-                  style={{
-                    fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
-                    fontSize: "14px",
-                    fontWeight: 500,
-                  }}
-                >
-                  Email
-                </label>
-                <input
-                  type="email"
-                  placeholder="designer@example.com"
-                  className="placeholder-[#9CA3AF] border border-[#E6E8EC] focus:border-[#D4FB20] focus:shadow-[0_0_0_4px_rgba(212,251,32,0.2)] transition-all duration-300 ease-out"
-                  style={{
-                    width: "100%",
-                    height: "48px",
-                    borderRadius: "12px",
-                    padding: "12px 24px",
-                    outline: "none",
-                    fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
-                    fontWeight: 400,
-                    fontSize: "18px",
-                    lineHeight: "160%",
-                    color: "#242528",
-                  }}
-                />
-              </div>
-
-              {/* Password */}
-              <div className="flex flex-col group" style={{ width: "453px", height: "77px", gap: "8px" }}>
-                <label
-                  className="text-[#242528] group-focus-within:text-[#b5d61a] group-focus-within:-translate-y-1 transform transition-all duration-300 ease-out"
-                  style={{
-                    fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
-                    fontSize: "14px",
-                    fontWeight: 500,
-                  }}
-                >
-                  Password
-                </label>
-                <input
-                  type="password"
-                  placeholder="********"
-                  className="placeholder-[#9CA3AF] border border-[#E6E8EC] focus:border-[#D4FB20] focus:shadow-[0_0_0_4px_rgba(212,251,32,0.2)] transition-all duration-300 ease-out"
-                  style={{
-                    width: "100%",
-                    height: "48px",
-                    borderRadius: "12px",
-                    padding: "12px 24px",
-                    outline: "none",
-                    fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
-                    fontWeight: 400,
-                    fontSize: "18px",
-                    lineHeight: "160%",
-                    color: "#242528",
-                    letterSpacing: "0px",
-                  }}
-                />
-              </div>
+              <InputField label="Email" type="email" placeholder="designer@example.com" />
+              <InputField label="Password" type="password" placeholder="********" />
             </div>
 
             <div className="flex justify-end mt-[32px]">
-              <button
-                className="bg-[#D4FB20] hover:bg-[#bce600] transition-colors duration-300"
-                style={{
-                  width: "104px", // Updated to 104px
-                  height: "46px",
-                  borderRadius: "24px",
-                  padding: "12px 24px",
-                  fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
-                  fontWeight: 500,
-                  fontSize: "18px",
-                  lineHeight: "120%",
-                  color: "#242528",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "8px",
-                }}
-              >
-                Sign In
-              </button>
+              <PrimaryButton text="Sign In" width="104px" />
             </div>
 
             {/* Divider */}
@@ -428,35 +312,20 @@ export default function LoginPage() {
 
             {/* Social Icons */}
             <div className="flex justify-center mt-[40px] gap-[16px]">
-              {/* Facebook */}
-              <button className="w-[72px] h-[72px] rounded-[24px] border border-[#D1D5DB] flex items-center justify-center hover:bg-gray-50 transition-colors">
-                <div style={{ width: "40px", height: "40px", position: "relative" }}>
-                  <Image src="/images/fb.png" alt="Facebook" fill className="object-contain" />
-                </div>
-              </button>
-              {/* Google */}
-              <button className="w-[72px] h-[72px] rounded-[24px] border border-[#D1D5DB] flex items-center justify-center hover:bg-gray-50 transition-colors">
-                <div style={{ width: "40px", height: "40px", position: "relative" }}>
-                  <Image src="/images/google.png" alt="Google" fill className="object-contain" />
-                </div>
-              </button>
+              <SocialButton iconSrc="/images/fb.png" altText="Facebook" />
+              <SocialButton iconSrc="/images/google.png" altText="Google" />
             </div>
           </div>
 
           {/* Bottom Text Absolute positioned */}
           <div
-            className="absolute flex justify-center items-center w-full"
-            style={{ bottom: "40px" }}
+            className="absolute flex justify-center items-center w-full bottom-[40px]"
           >
             <span
+              className="flex items-center gap-1 text-[14px] sm:text-[16px] text-[#6B7280]"
               style={{
                 fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
                 fontWeight: 400,
-                fontSize: "16px",
-                color: "#6B7280",
-                display: "flex",
-                gap: "4px",
-                alignItems: "center",
               }}
             >
               New user?

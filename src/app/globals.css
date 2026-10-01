@@ -16,3 +16,8 @@ body {
   background: var(--background);
   font-family: var(--font-satoshi), sans-serif;
 }
+
+::selection {
+  background: #DBEAFE;
+  color: #111827;
+}

@@ -1,4 +1,4 @@
-import CourseCard from "@/components/sections/CourseCard";
+import CourseCard from "@/components/ui/CourseCard";
 
 export default function Discover() {
   const row1 = [
@@ -31,20 +31,17 @@ export default function Discover() {
 
   const Tab = ({ label, active, isMore }: { label: string; active?: boolean; isMore?: boolean }) => (
     <div
-      className="flex items-center justify-center shrink-0 cursor-pointer select-none"
-      style={{
-        height: "43px",
-        borderRadius: "24px",
-        padding: isMore ? "0px" : "12px 16px",
-        background: isMore ? "transparent" : (active ? "#D4FB20" : "#F5F5F6"),
-        transition: "all 0.2s ease-in-out",
-      }}
+      className={`flex items-center justify-center shrink-0 cursor-pointer select-none transition-colors duration-300 rounded-full ${
+        isMore ? "bg-transparent p-0" : "px-3 py-1 h-[32px] sm:h-[38px] lg:h-[43px] sm:px-4 sm:py-2"
+      } ${
+        isMore ? "bg-transparent" : active ? "bg-[#D4FB20] hover:bg-[#bce600]" : "bg-[#F5F5F6] hover:bg-[#E2E4E7]"
+      }`}
     >
       <span
+        className={`transition-colors duration-300 text-[12px] sm:text-[14px] lg:text-[16px] ${isMore ? "hover:text-[#002ba8]" : ""}`}
         style={{
           fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
           fontWeight: 500,
-          fontSize: "16px",
           lineHeight: "120%",
           letterSpacing: "0%",
           color: isMore ? "#003BE2" : (active ? "#040819" : "#3F3F46"),
@@ -59,13 +56,12 @@ export default function Discover() {
     <section className="w-full bg-white flex flex-col items-center px-4 mt-[72px]">
       <div className="flex flex-col items-center text-center w-full">
         <h2
+          className="w-full max-w-[588px] text-[32px] sm:text-[36px] lg:text-[44px]"
           style={{
             fontFamily: "var(--font-poppins), 'Poppins', sans-serif",
             fontWeight: 600,
-            fontSize: "44px",
             lineHeight: "120%",
             letterSpacing: "-1%",
-            maxWidth: "588px",
             color: "#040819",
           }}
         >
@@ -75,14 +71,12 @@ export default function Discover() {
         </h2>
 
         <p
-          className="mt-[20px]"
+          className="mt-[20px] w-full max-w-[917px] text-[16px] sm:text-[18px]"
           style={{
             fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
             fontWeight: 400,
-            fontSize: "18px",
             lineHeight: "160%",
             letterSpacing: "0%",
-            maxWidth: "917px",
             color: "#82868E",
           }}
         >
@@ -116,13 +110,7 @@ export default function Discover() {
 
       {/* Course Cards Grid Container */}
       <div 
-        className="flex flex-wrap justify-start"
-        style={{
-          width: "1199px",
-          height: "808px",
-          marginTop: "77px",
-          gap: "40px",
-        }}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center lg:justify-start w-full max-w-[1199px] h-auto mt-10 lg:mt-[77px] gap-6 lg:gap-[40px]"
       >
         {[
           {

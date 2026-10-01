@@ -27,23 +27,13 @@ export default function Footer() {
 
   return (
     <footer
-      className="w-full flex justify-center bg-[#FFFFFF]"
-      style={{
-        height: "525px",
-        // The user mentioned top: 5852px which just defines its place on canvas, we just let it flow in DOM
-      }}
+      className="w-full flex justify-center bg-[#FFFFFF] border-t border-[#D1D5DB]"
     >
       <div
-        className="relative flex flex-col justify-between"
-        style={{
-          width: "1204px", // Matches previous section content width (1440 - 118*2)
-          maxWidth: "100%",
-          paddingTop: "70px",
-          paddingBottom: "50px",
-        }}
+        className="relative flex flex-col justify-between w-full max-w-[1204px] px-6 lg:px-0 pt-10 pb-8 lg:pt-[70px] lg:pb-[50px] min-h-[525px]"
       >
         {/* Top Content: Logo/Newsletter & Menu */}
-        <div className="flex justify-between w-full">
+        <div className="flex flex-col lg:flex-row justify-between w-full gap-12 lg:gap-0">
           {/* Left Side: Logo & Newsletter */}
           <div className="flex flex-col">
             {/* Logo */}
@@ -73,9 +63,8 @@ export default function Footer() {
 
             {/* Newsletter Text */}
             <p
+              className="mt-[16px] w-full lg:w-[528px]"
               style={{
-                width: "528px",
-                marginTop: "16px",
                 fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
                 fontWeight: 400,
                 fontSize: "14px",
@@ -88,45 +77,27 @@ export default function Footer() {
 
             {/* Email Field & Search Button */}
             <div
-              className="flex items-center"
-              style={{
-                marginTop: "45px",
-                gap: "24px",
-              }}
+              className="flex flex-col sm:flex-row items-stretch sm:items-center mt-6 lg:mt-[45px] gap-4 sm:gap-[24px]"
             >
               <input
                 type="email"
                 placeholder="Enter your email"
+                className="w-full sm:w-[376px] h-[52px] rounded-[100px] border border-[#D1D5DB] px-6 placeholder:text-[#242528] focus:border-[#242528] transition-colors outline-none"
                 style={{
-                  width: "376px",
-                  height: "52px",
-                  borderRadius: "100px",
-                  border: "1px solid #D1D5DB",
-                  padding: "18px 24px",
                   fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
                   fontWeight: 400,
                   fontSize: "16px",
                   color: "#242528",
-                  outline: "none",
                 }}
-                className="placeholder:text-[#242528] focus:border-[#242528] transition-colors"
               />
               <button
-                className="hover:opacity-90 transition-opacity"
+                className="w-full sm:w-[104px] h-[46px] rounded-[24px] bg-[#D4FB20] px-6 hover:opacity-90 transition-opacity flex items-center justify-center shrink-0"
                 style={{
-                  width: "104px",
-                  height: "46px",
-                  borderRadius: "24px",
-                  backgroundColor: "#D4FB20",
-                  padding: "12px 24px",
                   fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
                   fontWeight: 500,
                   fontSize: "18px",
                   lineHeight: "120%",
                   color: "#242528",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
                 }}
               >
                 Search
@@ -135,9 +106,8 @@ export default function Footer() {
 
             {/* Consent Text */}
             <p
+              className="mt-6 lg:mt-[24px] w-full lg:w-[504px]"
               style={{
-                width: "504px",
-                marginTop: "24px",
                 fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
                 fontWeight: 400,
                 fontSize: "12px",
@@ -151,18 +121,13 @@ export default function Footer() {
 
           {/* Right Side: Menu */}
           <div
-            className="flex"
-            style={{
-              width: "580px",
-              gap: "83px", // Column-wise gap
-              marginTop: "50px", // 70px (paddingTop) + 50px = 120px from top
-            }}
+            className="grid grid-cols-2 md:grid-cols-3 w-full lg:w-[580px] mt-8 lg:mt-[50px] gap-8 lg:gap-[83px]"
           >
             {/* Column 1 */}
-            <div className="flex flex-col" style={{ gap: "16px" }}>
+            <div className="flex flex-col gap-[16px]">
               {menuColumn1.map((item, idx) => (
                 <Link
-                  href="#"
+                  href="/404"
                   key={idx}
                   className="hover:underline underline-offset-4"
                   style={{
@@ -179,10 +144,10 @@ export default function Footer() {
             </div>
 
             {/* Column 2 */}
-            <div className="flex flex-col" style={{ gap: "16px", flex: 1 }}>
+            <div className="flex flex-col gap-[16px]">
               {menuColumn2.map((item, idx) => (
                 <Link
-                  href="#"
+                  href="/404"
                   key={idx}
                   className="hover:underline underline-offset-4"
                   style={{
@@ -199,10 +164,10 @@ export default function Footer() {
             </div>
 
             {/* Column 3 */}
-            <div className="flex flex-col" style={{ gap: "16px", flex: 1, marginLeft: "-48px" }}>
+            <div className="flex flex-col gap-[16px] lg:ml-[-48px]">
               {menuColumn3.map((item, idx) => (
                 <Link
-                  href="#"
+                  href="/404"
                   key={idx}
                   className="hover:underline underline-offset-4"
                   style={{
@@ -222,11 +187,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div
-          className="flex justify-between items-center w-full"
-          style={{
-            borderTop: "2px solid #E6E8EC",
-            paddingTop: "20px",
-          }}
+          className="flex flex-col sm:flex-row justify-between items-center w-full gap-4 sm:gap-0 border-t-2 border-[#E6E8EC] pt-6 lg:pt-[20px] mt-12 lg:mt-0 text-center sm:text-left"
         >
           <span
             style={{
@@ -240,12 +201,12 @@ export default function Footer() {
             @ 2023 ByteSpace. All rights reserved.
           </span>
 
-          <div className="flex gap-[24px]">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-[24px]">
             {["Privacy Policy", "Terms of Service", "Cookies Settings"].map(
               (text, idx) => (
                 <Link
                   key={idx}
-                  href="#"
+                  href="/404"
                   className="hover:underline underline-offset-4"
                   style={{
                     fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
