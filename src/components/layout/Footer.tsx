@@ -27,7 +27,7 @@ export default function Footer() {
 
   return (
     <footer
-      className="w-full flex justify-center bg-[#FFFFFF]"
+      className="w-full flex justify-center bg-[#FFFFFF] border-t border-[#D1D5DB]"
       style={{
         height: "525px",
         // The user mentioned top: 5852px which just defines its place on canvas, we just let it flow in DOM

@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import CourseCard from "@/components/sections/CourseCard";
+import CourseCard from "@/components/ui/CourseCard";
+import InputField from "@/components/ui/InputField";
+import PrimaryButton from "@/components/ui/PrimaryButton";
 
 export const metadata: Metadata = {
   title: "Sign Up | ByteSpace",
@@ -323,121 +325,13 @@ export default function SignupPage() {
 
               {/* Form Fields */}
               <div className="flex flex-col" style={{ gap: "24px" }}>
-                {/* Full Name */}
-                <div className="flex flex-col group" style={{ width: "453px", height: "77px", gap: "8px" }}>
-                  <label
-                    className="text-[#242528] group-focus-within:text-[#b5d61a] group-focus-within:-translate-y-1 transform transition-all duration-300 ease-out"
-                    style={{
-                      fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
-                      fontSize: "14px",
-                      fontWeight: 500,
-                    }}
-                  >
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Jamie Davis"
-                    className="placeholder-[#9CA3AF] border border-[#E6E8EC] focus:border-[#D4FB20] focus:shadow-[0_0_0_4px_rgba(212,251,32,0.2)] transition-all duration-300 ease-out"
-                    style={{
-                      width: "100%",
-                      height: "48px",
-                      borderRadius: "12px",
-                      padding: "12px 24px",
-                      outline: "none",
-                      fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
-                      fontWeight: 400,
-                      fontSize: "18px",
-                      lineHeight: "160%",
-                      color: "#242528",
-                    }}
-                  />
-                </div>
-
-                {/* Email */}
-                <div className="flex flex-col group" style={{ width: "453px", height: "77px", gap: "8px" }}>
-                  <label
-                    className="text-[#242528] group-focus-within:text-[#b5d61a] group-focus-within:-translate-y-1 transform transition-all duration-300 ease-out"
-                    style={{
-                      fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
-                      fontSize: "14px",
-                      fontWeight: 500,
-                    }}
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    placeholder="designer@example.com"
-                    className="placeholder-[#9CA3AF] border border-[#E6E8EC] focus:border-[#D4FB20] focus:shadow-[0_0_0_4px_rgba(212,251,32,0.2)] transition-all duration-300 ease-out"
-                    style={{
-                      width: "100%",
-                      height: "48px",
-                      borderRadius: "12px",
-                      padding: "12px 24px",
-                      outline: "none",
-                      fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
-                      fontWeight: 400,
-                      fontSize: "18px",
-                      lineHeight: "160%",
-                      color: "#242528",
-                    }}
-                  />
-                </div>
-
-                {/* Password */}
-                <div className="flex flex-col group" style={{ width: "453px", height: "77px", gap: "8px" }}>
-                  <label
-                    className="text-[#242528] group-focus-within:text-[#b5d61a] group-focus-within:-translate-y-1 transform transition-all duration-300 ease-out"
-                    style={{
-                      fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
-                      fontSize: "14px",
-                      fontWeight: 500,
-                    }}
-                  >
-                    Password
-                  </label>
-                  <input
-                    type="password"
-                    placeholder="********"
-                    className="placeholder-[#9CA3AF] border border-[#E6E8EC] focus:border-[#D4FB20] focus:shadow-[0_0_0_4px_rgba(212,251,32,0.2)] transition-all duration-300 ease-out"
-                    style={{
-                      width: "100%",
-                      height: "48px",
-                      borderRadius: "12px",
-                      padding: "12px 24px", // Pushed placeholder to the right
-                      outline: "none",
-                      fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
-                      fontWeight: 400,
-                      fontSize: "18px",
-                      lineHeight: "160%",
-                      color: "#242528",
-                      letterSpacing: "0px", // Brought stars closer together
-                    }}
-                  />
-                </div>
+                <InputField label="Full Name" type="text" placeholder="Jamie Davis" />
+                <InputField label="Email" type="email" placeholder="designer@example.com" />
+                <InputField label="Password" type="password" placeholder="********" />
               </div>
 
               <div className="flex justify-end mt-[32px]">
-                <button
-                  className="bg-[#D4FB20] hover:bg-[#bce600] transition-colors duration-300"
-                  style={{
-                    width: "123px",
-                    height: "46px",
-                    borderRadius: "24px",
-                    padding: "12px 24px",
-                    fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
-                    fontWeight: 500,
-                    fontSize: "18px",
-                    lineHeight: "120%",
-                    color: "#242528",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  Continue
-                </button>
+                <PrimaryButton text="Continue" width="123px" />
               </div>
             </div>
 

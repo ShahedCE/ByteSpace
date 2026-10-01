@@ -1,4 +1,4 @@
-import CourseCard from "@/components/sections/CourseCard";
+import CourseCard from "@/components/ui/CourseCard";
 
 export default function Discover() {
   const row1 = [

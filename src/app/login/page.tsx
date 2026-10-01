@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import CourseCard from "@/components/sections/CourseCard";
+import CourseCard from "@/components/ui/CourseCard";
+import InputField from "@/components/ui/InputField";
+import PrimaryButton from "@/components/ui/PrimaryButton";
+import SocialButton from "@/components/ui/SocialButton";
 
 export const metadata: Metadata = {
   title: "Login | ByteSpace",
@@ -322,91 +325,12 @@ export default function LoginPage() {
 
             {/* Form Fields */}
             <div className="flex flex-col" style={{ gap: "24px" }}>
-              {/* Email */}
-              <div className="flex flex-col group" style={{ width: "453px", height: "77px", gap: "8px" }}>
-                <label
-                  className="text-[#242528] group-focus-within:text-[#b5d61a] group-focus-within:-translate-y-1 transform transition-all duration-300 ease-out"
-                  style={{
-                    fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
-                    fontSize: "14px",
-                    fontWeight: 500,
-                  }}
-                >
-                  Email
-                </label>
-                <input
-                  type="email"
-                  placeholder="designer@example.com"
-                  className="placeholder-[#9CA3AF] border border-[#E6E8EC] focus:border-[#D4FB20] focus:shadow-[0_0_0_4px_rgba(212,251,32,0.2)] transition-all duration-300 ease-out"
-                  style={{
-                    width: "100%",
-                    height: "48px",
-                    borderRadius: "12px",
-                    padding: "12px 24px",
-                    outline: "none",
-                    fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
-                    fontWeight: 400,
-                    fontSize: "18px",
-                    lineHeight: "160%",
-                    color: "#242528",
-                  }}
-                />
-              </div>
-
-              {/* Password */}
-              <div className="flex flex-col group" style={{ width: "453px", height: "77px", gap: "8px" }}>
-                <label
-                  className="text-[#242528] group-focus-within:text-[#b5d61a] group-focus-within:-translate-y-1 transform transition-all duration-300 ease-out"
-                  style={{
-                    fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
-                    fontSize: "14px",
-                    fontWeight: 500,
-                  }}
-                >
-                  Password
-                </label>
-                <input
-                  type="password"
-                  placeholder="********"
-                  className="placeholder-[#9CA3AF] border border-[#E6E8EC] focus:border-[#D4FB20] focus:shadow-[0_0_0_4px_rgba(212,251,32,0.2)] transition-all duration-300 ease-out"
-                  style={{
-                    width: "100%",
-                    height: "48px",
-                    borderRadius: "12px",
-                    padding: "12px 24px",
-                    outline: "none",
-                    fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
-                    fontWeight: 400,
-                    fontSize: "18px",
-                    lineHeight: "160%",
-                    color: "#242528",
-                    letterSpacing: "0px",
-                  }}
-                />
-              </div>
+              <InputField label="Email" type="email" placeholder="designer@example.com" />
+              <InputField label="Password" type="password" placeholder="********" />
             </div>
 
             <div className="flex justify-end mt-[32px]">
-              <button
-                className="bg-[#D4FB20] hover:bg-[#bce600] transition-colors duration-300"
-                style={{
-                  width: "104px", // Updated to 104px
-                  height: "46px",
-                  borderRadius: "24px",
-                  padding: "12px 24px",
-                  fontFamily: "var(--font-satoshi), 'Satoshi', sans-serif",
-                  fontWeight: 500,
-                  fontSize: "18px",
-                  lineHeight: "120%",
-                  color: "#242528",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "8px",
-                }}
-              >
-                Sign In
-              </button>
+              <PrimaryButton text="Sign In" width="104px" />
             </div>
 
             {/* Divider */}
@@ -428,18 +352,8 @@ export default function LoginPage() {
 
             {/* Social Icons */}
             <div className="flex justify-center mt-[40px] gap-[16px]">
-              {/* Facebook */}
-              <button className="w-[72px] h-[72px] rounded-[24px] border border-[#D1D5DB] flex items-center justify-center hover:bg-gray-50 transition-colors">
-                <div style={{ width: "40px", height: "40px", position: "relative" }}>
-                  <Image src="/images/fb.png" alt="Facebook" fill className="object-contain" />
-                </div>
-              </button>
-              {/* Google */}
-              <button className="w-[72px] h-[72px] rounded-[24px] border border-[#D1D5DB] flex items-center justify-center hover:bg-gray-50 transition-colors">
-                <div style={{ width: "40px", height: "40px", position: "relative" }}>
-                  <Image src="/images/google.png" alt="Google" fill className="object-contain" />
-                </div>
-              </button>
+              <SocialButton iconSrc="/images/fb.png" altText="Facebook" />
+              <SocialButton iconSrc="/images/google.png" altText="Google" />
             </div>
           </div>
 
