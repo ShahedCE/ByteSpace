@@ -179,7 +179,6 @@ All routes are statically generated for optimal performance.
 ## 🔗 Repository
 
 **GitHub:** [https://github.com/ShahedCE/ByteSpace](https://github.com/ShahedCE/ByteSpace)  
-**Branch:** `fix/final-ui-fixes`
 
 ---
 
