@@ -43,7 +43,7 @@ export default function Explore() {
             maxWidth: "100%", // For responsiveness
           }}
         >
-          At Bytespace, we believe in empowering individuals through knowledge. Our diverse range of courses spans various fields, ensuring there's something for everyone. Unleash your potential and explore our carefully curated categories.
+          At Bytespace, we believe in empowering individuals through knowledge. Our diverse range of courses spans various fields, ensuring there&apos;s something for everyone. Unleash your potential and explore our carefully curated categories.
         </p>
 
         {/* Categories Container */}
